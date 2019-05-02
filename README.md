@@ -23,7 +23,7 @@
 created and populated
 
 ### TF/IDF Relevance Algorithm
-![](https://github.com/khdevnet/warehouse/raw/master/src/algorithm.png)
+![](https://github.com/khdevnet/elastic/raw/master/src/algorithm.png)
 ## Samples
 Add mappings
 

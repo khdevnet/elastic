@@ -22,6 +22,12 @@
 * Specifying the number of replicas is dynamic - can be changed after the index is
 created and populated
 
+### TF/IDF Relevance Algorithm
+![](https://github.com/khdevnet/elastic/raw/master/src/algorithm.png)
+
+### Data types
+![](https://github.com/khdevnet/elastic/raw/master/src/data-types.png)
+
 ## Samples
 Add mappings
 

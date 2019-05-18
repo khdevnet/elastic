@@ -27,6 +27,34 @@ POST 'localhost:9200/books/fiction/1?pretty
   "publishers": "Bloomsbury",
   "date": "1997-06-27"
 }
+
+# Add mappings
+
+http://localhost:9200/store
+PUT
+{
+  "mappings": {
+    "book": {
+      "properties": {
+        "title": { 
+          "type": "text",
+          "analyzer": "english"
+        }
+      }
+    }
+  }
+}
+
+
+# Validate added mapping
+
+http://localhost:9200/store/_analyze
+PUT
+{
+  "field": "title",
+  "text":  "The quick Brown Foxes"
+}
+
 ```
 
 ## Notes
@@ -57,36 +85,3 @@ created and populated
 
 ### Data types
 ![](https://github.com/khdevnet/elastic/raw/master/src/data-types.png)
-
-## Samples
-Add mappings
-
-```
-http://localhost:9200/store
-PUT
-{
-  "mappings": {
-    "book": {
-      "properties": {
-        "title": { 
-          "type": "text",
-          "analyzer": "english"
-        }
-      }
-    }
-  }
-}
-
-```
-
-* Validate added mapping
-
-```
-http://localhost:9200/store/_analyze
-PUT
-{
-  "field": "title",
-  "text":  "The quick Brown Foxes"
-}
-
-```

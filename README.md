@@ -3,6 +3,30 @@
 ```
 # Display current index mappings
 GET 'localhost:9200/books/_mapping?&pretty'
+
+# Add current index mappings
+/////////
+
+# Update already exists index mapping (you can add only new fields)
+PUT 'localhost:9200/books/_mapping/fiction?pretty'
+{
+  "properties": {
+    "pages": {
+      "type": "integer"
+    }
+  }
+}
+
+# Add item to idex
+POST 'localhost:9200/books/fiction/1?pretty
+{
+  "name": "Harry Potter",
+  "author": "J.K.Rowling",
+  "cost": "325.00",
+  "Available": "true",
+  "publishers": "Bloomsbury",
+  "date": "1997-06-27"
+}
 ```
 
 ## Notes

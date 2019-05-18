@@ -1,4 +1,10 @@
 # Elasticsearch
+## Commands
+```
+# Display current index mappings
+GET 'localhost:9200/books/_mapping?&pretty'
+```
+
 ## Notes
 ### Document
 * Basic unit of information to be indexed

@@ -1,13 +1,13 @@
 # Elasticsearch
+
 ## Commands
+### Display current index mappings
 ```
-# Display current index mappings
 GET 'localhost:9200/books/_mapping?&pretty'
+```
 
-# Add current index mappings
-/////////
-
-# Update already exists index mapping (you can add only new fields)
+### Update already exists index mapping (you can add only new fields)
+```
 PUT 'localhost:9200/books/_mapping/fiction?pretty'
 {
   "properties": {
@@ -16,8 +16,9 @@ PUT 'localhost:9200/books/_mapping/fiction?pretty'
     }
   }
 }
-
-# Add item to idex
+```
+### Add item to idex
+```
 POST 'localhost:9200/books/fiction/1?pretty
 {
   "name": "Harry Potter",
@@ -27,9 +28,9 @@ POST 'localhost:9200/books/fiction/1?pretty
   "publishers": "Bloomsbury",
   "date": "1997-06-27"
 }
-
-# Add mappings
-
+```
+### Add mappings
+```
 http://localhost:9200/store
 PUT
 {
@@ -44,17 +45,15 @@ PUT
     }
   }
 }
-
-
-# Validate added mapping
-
+```
+### Validate added mapping
+```
 http://localhost:9200/store/_analyze
 PUT
 {
   "field": "title",
   "text":  "The quick Brown Foxes"
 }
-
 ```
 
 ## Notes

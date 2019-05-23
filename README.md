@@ -84,3 +84,9 @@ created and populated
 
 ### Data types
 ![](https://github.com/khdevnet/elastic/raw/master/src/data-types.png)
+
+### Mapping
+#### Meta fields
+* _source - The original JSON representing the body of the document.
+* _all - concatenates contents of all fields into one big string with space delimeter.
+

@@ -97,4 +97,5 @@ created and populated
 * **Stemming** attempts to remove the differences between inflected forms of a word, in order to reduce each word to its root form
 * The **synonym** token filter allows to easily handle synonyms during the analysis process. (fell, fall)
 
+#### Analyzers
 ![](https://github.com/khdevnet/elastic/raw/master/src/analyzers.png)

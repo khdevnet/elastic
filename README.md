@@ -95,5 +95,6 @@ created and populated
 * **An analyzer**  — whether built-in or custom — is just a package which contains three lower-level building blocks: character filters, tokenizers, and token filters.
 * **Normalizers** are similar to analyzers except that they may only emit a single token. As a consequence, they do not have a tokenizer and only accept a subset of the available char filters and token filters. Only the filters that work on a per-character basis are allowed. For instance a lowercasing filter would be allowed, but not a stemming filter, which needs to look at the keyword as a whole. 
 * **Stemming** attempts to remove the differences between inflected forms of a word, in order to reduce each word to its root form
-
 * The **synonym** token filter allows to easily handle synonyms during the analysis process. (fell, fall)
+
+![](https://github.com/khdevnet/elastic/raw/master/src/analyzers.png)
